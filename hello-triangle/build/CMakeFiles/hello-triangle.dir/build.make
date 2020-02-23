@@ -57,27 +57,27 @@ include CMakeFiles/hello-triangle.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/hello-triangle.dir/flags.make
 
-CMakeFiles/hello-triangle.dir/main.cpp.o: CMakeFiles/hello-triangle.dir/flags.make
-CMakeFiles/hello-triangle.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hello-triangle.dir/main.cpp.o"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hello-triangle.dir/main.cpp.o -c "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/main.cpp"
+CMakeFiles/hello-triangle.dir/src/main.cpp.o: CMakeFiles/hello-triangle.dir/flags.make
+CMakeFiles/hello-triangle.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hello-triangle.dir/src/main.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hello-triangle.dir/src/main.cpp.o -c "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/src/main.cpp"
 
-CMakeFiles/hello-triangle.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello-triangle.dir/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/main.cpp" > CMakeFiles/hello-triangle.dir/main.cpp.i
+CMakeFiles/hello-triangle.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello-triangle.dir/src/main.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/src/main.cpp" > CMakeFiles/hello-triangle.dir/src/main.cpp.i
 
-CMakeFiles/hello-triangle.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello-triangle.dir/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/main.cpp" -o CMakeFiles/hello-triangle.dir/main.cpp.s
+CMakeFiles/hello-triangle.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello-triangle.dir/src/main.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/src/main.cpp" -o CMakeFiles/hello-triangle.dir/src/main.cpp.s
 
 # Object files for target hello-triangle
 hello__triangle_OBJECTS = \
-"CMakeFiles/hello-triangle.dir/main.cpp.o"
+"CMakeFiles/hello-triangle.dir/src/main.cpp.o"
 
 # External object files for target hello-triangle
 hello__triangle_EXTERNAL_OBJECTS =
 
-hello-triangle: CMakeFiles/hello-triangle.dir/main.cpp.o
+hello-triangle: CMakeFiles/hello-triangle.dir/src/main.cpp.o
 hello-triangle: CMakeFiles/hello-triangle.dir/build.make
 hello-triangle: libs/glapp/libglapp.a
 hello-triangle: CMakeFiles/hello-triangle.dir/link.txt

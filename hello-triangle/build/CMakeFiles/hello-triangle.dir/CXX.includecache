@@ -20,7 +20,7 @@ GL/glew.h
 string
 -
 
-/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/main.cpp
+/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/src/main.cpp
 iostream
 -
 glapp/shader.hpp

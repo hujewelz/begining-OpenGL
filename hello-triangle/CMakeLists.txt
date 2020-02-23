@@ -4,7 +4,7 @@ project(hello-triangle)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(hello-triangle main.cpp)
+add_executable(hello-triangle ./src/main.cpp)
 
 add_subdirectory(libs/glapp)
 target_link_libraries(hello-triangle glapp)
