@@ -1,1 +1,0 @@
-/usr/bin/clang++  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/hello-triangle.dir/main.cpp.o  -o hello-triangle   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib libs/glapp/libglapp.a -lGLEW -lglfw.3.3 -framework OpenGL 
