@@ -1,2 +1,0 @@
-/usr/bin/ar qc libglapp.a  CMakeFiles/glapp.dir/src/glapp.cpp.o CMakeFiles/glapp.dir/src/shader.cpp.o
-/usr/bin/ranlib libglapp.a
