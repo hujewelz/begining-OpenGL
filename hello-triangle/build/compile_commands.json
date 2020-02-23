@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/build",
+  "command": "/usr/bin/clang++   -I\"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/libs/glapp/include\" -I/usr/local/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=gnu++11 -o CMakeFiles/hello-triangle.dir/main.cpp.o -c \"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/main.cpp\"",
+  "file": "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/main.cpp"
+},
+{
+  "directory": "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/build/libs/glapp",
+  "command": "/usr/bin/clang++   -I\"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/libs/glapp/include\" -I/usr/local/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=gnu++11 -o CMakeFiles/glapp.dir/src/glapp.cpp.o -c \"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/libs/glapp/src/glapp.cpp\"",
+  "file": "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/libs/glapp/src/glapp.cpp"
+},
+{
+  "directory": "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/build/libs/glapp",
+  "command": "/usr/bin/clang++   -I\"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/libs/glapp/include\" -I/usr/local/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=gnu++11 -o CMakeFiles/glapp.dir/src/shader.cpp.o -c \"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/libs/glapp/src/shader.cpp\"",
+  "file": "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-triangle/libs/glapp/src/shader.cpp"
+}
+]
