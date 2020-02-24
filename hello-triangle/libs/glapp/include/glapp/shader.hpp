@@ -4,15 +4,14 @@
 #include <GL/glew.h>
 #include <string>
 
-
 class Shader {
   public:
     GLuint program;
-    Shader(const char* vertShader, const char* fragShader); 
-    void use();
+    Shader(const char* vShaderPath, const char* fShaderPath); 
     ~Shader();
+    void use();
   private:
-    void linkShader(const char* vertShader, const char* fragShader);
+    void linkShader(const char* vShaderPath, const char* fShaderPath);
     const GLuint compileSharder(const char* shaderpath, GLenum type); 
 };
 

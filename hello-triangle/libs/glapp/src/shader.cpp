@@ -3,9 +3,9 @@
 #include <sstream>
 #include <iostream>
 
-Shader::Shader(const char* vertShader, const char* fragShader) 
+Shader::Shader(const char* vShaderPath, const char* fShaderPath) 
 {
-    linkShader(vertShader, fragShader);
+    linkShader(vShaderPath, fShaderPath);
 }
 
 void Shader::use() 
@@ -18,11 +18,11 @@ Shader::~Shader()
     glDeleteProgram(program);
 }
 
-void Shader::linkShader(const char* vertShader, const char* fragShader) 
+void Shader::linkShader(const char* vShaderPath, const char* fShaderPath) 
 {
     program = glCreateProgram();
-    GLuint vertexShader = compileSharder(vertShader, GL_VERTEX_SHADER);
-    GLuint fragmentShader = compileSharder(fragShader, GL_FRAGMENT_SHADER);
+    GLuint vertexShader = compileSharder(vShaderPath, GL_VERTEX_SHADER);
+    GLuint fragmentShader = compileSharder(fShaderPath, GL_FRAGMENT_SHADER);
     glAttachShader(program, vertexShader);
     glAttachShader(program, fragmentShader);
     
