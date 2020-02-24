@@ -36,7 +36,7 @@ public:
             {{0.0f, 0.5f, 0.0f}, {1.0f, 0.0f, 0.0f}},    // middle top
         };
         
-        shader = new Shader("../resource/core.vs", "../resource/core.fs");
+        shader = new Shader("./resource/core.vs", "./resource/core.fs");
 
         glGenVertexArrays(1, &VAO);
         glBindVertexArray(VAO);
