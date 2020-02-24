@@ -2,6 +2,9 @@
 #include <glapp/shader.hpp>
 #include <glapp/glapp.hpp>
 
+const int SCR_WIDTH = 800;
+const int SCR_HEIGHT = 600;
+
 struct VertextData {
     GLfloat vertices[3];
     GLfloat colors[3];
@@ -18,7 +21,14 @@ private:
     GLuint VAO, VBO;
     Shader *shader;
 public:
-    void initialized()
+    MyApp(const char* title, int screenWidth, int screenHeight) : GLApplication(title, screenWidth, screenHeight) {}
+
+    ~MyApp()
+    {
+        delete shader;
+    }
+
+    void initialized() override
     {
         static const VertextData vertices[] = {
             {{-1.0f, -0.5f, 0.0f}, {1.0f, 0.0f, 0.0f}},  // left bottom
@@ -26,7 +36,7 @@ public:
             {{0.0f, 0.5f, 0.0f}, {1.0f, 0.0f, 0.0f}},    // middle top
         };
         
-        shader = new Shader("./resource/core.vs", "./resource/core.fs");
+        shader = new Shader("../resource/core.vs", "../resource/core.fs");
 
         glGenVertexArrays(1, &VAO);
         glBindVertexArray(VAO);
@@ -41,7 +51,7 @@ public:
         glEnableVertexAttribArray(VertextAttribColorIndex);
     }
 
-    void render() 
+    void render() override
     {
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
@@ -55,8 +65,7 @@ public:
 };
 
 int main() {
-    MyApp app;
-
+    MyApp app("HellTriangle", SCR_WIDTH, SCR_HEIGHT);
     app.run();
     return 0;
 }

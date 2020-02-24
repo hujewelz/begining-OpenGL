@@ -37,7 +37,7 @@ const GLuint Shader::compileSharder(const char* shaderpath, GLenum type)
     std::string sCode;
     std::ifstream shaderFile;
     shaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
-
+    std::cout << "SHAPER PATH:" << shaderpath << std::endl;
     try {
         // open the file
         shaderFile.open(shaderpath);

@@ -1,20 +1,19 @@
-#ifndef __GLAPP_H__
-#define __GLAPP_H__ 
-#include <iostream>
+#ifndef GLAPP_H
+#define GLAPP_H 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-
-const unsigned int SCR_WIDTH = 800;
-const unsigned int SCR_HEIGHT = 600;
 
 class GLApplication
 {
 public:
+    GLApplication(const char* title, int screenWidth, int screenHeight) : m_title(title), m_screenWidth(screenWidth), m_screenHeight(screenHeight) {};
     void run();
     virtual void initialized() {};
     virtual void render() {};
     void processInput(GLFWwindow *window);
 private:
+    const char* m_title;
+    int m_screenWidth, m_screenHeight;
     bool isInitialized = false;
     void initial(); 
     // void framebuffer_size_callback(GLFWwindow* window, int width, int height);

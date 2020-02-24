@@ -7,8 +7,6 @@
 #IncludeRegexTransform: 
 
 ../libs/glapp/include/glapp/glapp.hpp
-iostream
--
 GL/glew.h
 -
 GLFW/glfw3.h

@@ -1,10 +1,11 @@
+#include <iostream>
 #include <glapp/glapp.hpp>
+
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
 void GLApplication::run() 
 {
-    std::cout << "run" << std::endl;
     if (isInitialized) 
         return;
     initial();
@@ -26,7 +27,7 @@ void GLApplication::initial()
 
     // glfw window creation
     // --------------------
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(m_screenWidth, m_screenHeight, m_title, NULL, NULL);
     if (window == NULL)
     {
         std::cout << "Failed to create GLFW window" << std::endl;
@@ -41,7 +42,6 @@ void GLApplication::initial()
         std::cout << "Init glew failed";
         return;
     }
-    std::cout << "initialized calling" << std::endl;
     initialized();
     // render loop
     // -----------
