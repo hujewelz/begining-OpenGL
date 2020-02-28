@@ -33,6 +33,12 @@
 				"file" : 0,
 				"line" : 10,
 				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 0
 			}
 		]
 	},
@@ -57,6 +63,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "/usr/local/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/libs/image"
 				}
 			],
 			"language" : "CXX",
@@ -71,6 +81,10 @@
 		{
 			"backtrace" : 2,
 			"id" : "glapp::@b358aa6f736b0ff6b267"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "image::@82336848b37de5f7a524"
 		}
 	],
 	"id" : "hello-texture::@6890427a1f51a3e7e1df",
@@ -98,6 +112,11 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "libs/glapp/libglapp.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "libs/image/libimage.a",
 				"role" : "libraries"
 			},
 			{

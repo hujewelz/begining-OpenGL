@@ -80,6 +80,7 @@ hello__texture_EXTERNAL_OBJECTS =
 hello-texture: CMakeFiles/hello-texture.dir/src/main.cpp.o
 hello-texture: CMakeFiles/hello-texture.dir/build.make
 hello-texture: libs/glapp/libglapp.a
+hello-texture: libs/image/libimage.a
 hello-texture: CMakeFiles/hello-texture.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable hello-texture"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hello-texture.dir/link.txt --verbose=$(VERBOSE)

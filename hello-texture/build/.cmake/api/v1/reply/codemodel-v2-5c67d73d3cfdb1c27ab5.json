@@ -8,7 +8,8 @@
 					"build" : ".",
 					"childIndexes" : 
 					[
-						1
+						1,
+						2
 					],
 					"minimumCMakeVersion" : 
 					{
@@ -34,6 +35,20 @@
 					[
 						0
 					]
+				},
+				{
+					"build" : "libs/image",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "libs/image",
+					"targetIndexes" : 
+					[
+						2
+					]
 				}
 			],
 			"name" : "Debug",
@@ -43,13 +58,15 @@
 					"directoryIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					],
 					"name" : "hello-texture",
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -65,8 +82,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "hello-texture::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-hello-texture-Debug-fe2a499b7615a73a2ca4.json",
+					"jsonFile" : "target-hello-texture-Debug-14599c90082e2299863b.json",
 					"name" : "hello-texture",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "image::@82336848b37de5f7a524",
+					"jsonFile" : "target-image-Debug-765525a84fa0bb1ed18d.json",
+					"name" : "image",
 					"projectIndex" : 0
 				}
 			]

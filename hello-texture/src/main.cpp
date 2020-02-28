@@ -1,6 +1,7 @@
 #include <iostream>
 #include <glapp/shader.hpp>
 #include <glapp/glapp.hpp>
+#include <image.h>
 
 const int SCR_WIDTH = 800;
 const int SCR_HEIGHT = 600;
@@ -8,17 +9,19 @@ const int SCR_HEIGHT = 600;
 struct VertextData {
     GLfloat vertices[3];
     GLfloat colors[3];
+    GLfloat texCoords[3];
 };
 
 enum VertextAttribIndex {
    VertextAttribPositionIndex,
-   VertextAttribColorIndex 
+   VertextAttribColorIndex,
+   VertextAttribTexCoordIndex 
 };
 
 class MyApp: public GLApplication
 {
 private:
-    GLuint VAO, VBO;
+    GLuint VAO, VBO, texture;
     Shader *shader;
 public:
     MyApp(const char* title, int screenWidth, int screenHeight) : GLApplication(title, screenWidth, screenHeight) {}
@@ -31,10 +34,11 @@ public:
     void initialized() override
     {
         static const VertextData vertices[] = {
-            {{-1.0f, -0.5f, 0.0f}, {1.0f, 0.0f, 0.0f}},  // left bottom
-            {{1.0f, -0.5f, 0.0f},  {0.0f, 1.0f, 0.0f}},   // right bottom
-            {{1.0f, 0.5f, 0.0f},   {0.0f, 0.0f, 1.0f}},    // right top
-            {{-1.0f, 0.5f, 0.0f},  {1.0f, 0.0f, 0.0f}},   // left top
+            // 顶点坐标              颜色                 纹理坐标 
+            {{-1.0f, -0.5f, 0.0f}, {1.0f, 0.0f, 0.0f}, {0.0f, 0.0f}},   // left bottom
+            {{1.0f, -0.5f, 0.0f},  {0.0f, 1.0f, 0.0f}, {1.0f, 0.0f}},   // right bottom
+            {{1.0f, 0.5f, 0.0f},   {0.0f, 0.0f, 1.0f}, {1.0f, 1.0f}},    // right top
+            {{-1.0f, 0.5f, 0.0f},  {1.0f, 0.0f, 0.0f}, {0.0f, 1.0f}},   // left top
         };
 
         // static const GLbyte indices[] = {
@@ -60,6 +64,25 @@ public:
         glEnableVertexAttribArray(VertextAttribPositionIndex);
         glVertexAttribPointer(VertextAttribColorIndex, 3, GL_FLOAT, GL_FALSE, sizeof(VertextData), (void *)(offsetof(VertextData, colors)));
         glEnableVertexAttribArray(VertextAttribColorIndex);
+        glVertexAttribPointer(VertextAttribTexCoordIndex, 2, GL_FLOAT, GL_FALSE, sizeof(VertextData), (void *)(offsetof(VertextData, texCoords)));
+        glEnableVertexAttribArray(VertextAttribTexCoordIndex);
+
+        glGenTextures(1, &texture);
+        glBindTexture(GL_TEXTURE_2D, texture);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+        int width, height, channels;
+        stbi_set_flip_vertically_on_load(true);
+        unsigned char *data = stbi_load("./resource/demo.jpg", &width, &height, &channels, 0);
+        if (data)
+        {
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+            glGenerateMipmap(GL_TEXTURE_RECTANGLE);
+        }
+        stbi_image_free(data);
     }
 
     void render() override
@@ -71,6 +94,8 @@ public:
         shader->use();
 
         glBindVertexArray(VAO);
+        glBindTexture(GL_TEXTURE_2D, texture);
+
         // glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_BYTE, 0);
         glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
     }

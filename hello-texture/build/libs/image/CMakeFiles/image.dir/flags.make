@@ -6,5 +6,5 @@ CXX_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/Ma
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/libs/glapp/include" -I/usr/local/include -I"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/libs/image" 
+CXX_INCLUDES = -I"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/libs/image" 
 

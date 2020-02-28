@@ -3,6 +3,7 @@
 
 CMakeFiles/hello-texture.dir/src/main.cpp.o: ../libs/glapp/include/glapp/glapp.hpp
 CMakeFiles/hello-texture.dir/src/main.cpp.o: ../libs/glapp/include/glapp/shader.hpp
+CMakeFiles/hello-texture.dir/src/main.cpp.o: ../libs/image/image.h
 CMakeFiles/hello-texture.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/hello-texture.dir/src/main.cpp.o: /usr/local/include/GL/glew.h
 CMakeFiles/hello-texture.dir/src/main.cpp.o: /usr/local/include/GLFW/glfw3.h

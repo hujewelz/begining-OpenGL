@@ -1,4 +1,4 @@
-# Install script for directory: /Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture
+# Install script for directory: /Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/libs/image
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,20 +32,3 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/libs/glapp/cmake_install.cmake")
-  include("/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/libs/image/cmake_install.cmake")
-
-endif()
-
-if(CMAKE_INSTALL_COMPONENT)
-  set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
-else()
-  set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
-endif()
-
-string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
-       "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/${CMAKE_INSTALL_MANIFEST}"
-     "${CMAKE_INSTALL_MANIFEST_CONTENT}")

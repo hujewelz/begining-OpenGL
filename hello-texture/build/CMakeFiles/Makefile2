@@ -55,17 +55,20 @@ CMAKE_BINARY_DIR = "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture
 # The main recursive "all" target.
 all: CMakeFiles/hello-texture.dir/all
 all: libs/glapp/all
+all: libs/image/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: libs/glapp/preinstall
+preinstall: libs/image/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/hello-texture.dir/clean
 clean: libs/glapp/clean
+clean: libs/image/clean
 
 .PHONY : clean
 
@@ -88,10 +91,29 @@ libs/glapp/clean: libs/glapp/CMakeFiles/glapp.dir/clean
 .PHONY : libs/glapp/clean
 
 #=============================================================================
+# Directory level rules for directory libs/image
+
+# Recursive "all" directory target.
+libs/image/all: libs/image/CMakeFiles/image.dir/all
+
+.PHONY : libs/image/all
+
+# Recursive "preinstall" directory target.
+libs/image/preinstall:
+
+.PHONY : libs/image/preinstall
+
+# Recursive "clean" directory target.
+libs/image/clean: libs/image/CMakeFiles/image.dir/clean
+
+.PHONY : libs/image/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/hello-texture.dir
 
 # All Build rule for target.
 CMakeFiles/hello-texture.dir/all: libs/glapp/CMakeFiles/glapp.dir/all
+CMakeFiles/hello-texture.dir/all: libs/image/CMakeFiles/image.dir/all
 	$(MAKE) -f CMakeFiles/hello-texture.dir/build.make CMakeFiles/hello-texture.dir/depend
 	$(MAKE) -f CMakeFiles/hello-texture.dir/build.make CMakeFiles/hello-texture.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/CMakeFiles" --progress-num=4,5 "Built target hello-texture"
@@ -99,7 +121,7 @@ CMakeFiles/hello-texture.dir/all: libs/glapp/CMakeFiles/glapp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/hello-texture.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/CMakeFiles" 5
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/CMakeFiles" 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/hello-texture.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/CMakeFiles" 0
 .PHONY : CMakeFiles/hello-texture.dir/rule
@@ -140,6 +162,33 @@ glapp: libs/glapp/CMakeFiles/glapp.dir/rule
 libs/glapp/CMakeFiles/glapp.dir/clean:
 	$(MAKE) -f libs/glapp/CMakeFiles/glapp.dir/build.make libs/glapp/CMakeFiles/glapp.dir/clean
 .PHONY : libs/glapp/CMakeFiles/glapp.dir/clean
+
+#=============================================================================
+# Target rules for target libs/image/CMakeFiles/image.dir
+
+# All Build rule for target.
+libs/image/CMakeFiles/image.dir/all:
+	$(MAKE) -f libs/image/CMakeFiles/image.dir/build.make libs/image/CMakeFiles/image.dir/depend
+	$(MAKE) -f libs/image/CMakeFiles/image.dir/build.make libs/image/CMakeFiles/image.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/CMakeFiles" --progress-num=6,7 "Built target image"
+.PHONY : libs/image/CMakeFiles/image.dir/all
+
+# Build rule for subdir invocation for target.
+libs/image/CMakeFiles/image.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/CMakeFiles" 2
+	$(MAKE) -f CMakeFiles/Makefile2 libs/image/CMakeFiles/image.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/CMakeFiles" 0
+.PHONY : libs/image/CMakeFiles/image.dir/rule
+
+# Convenience name for target.
+image: libs/image/CMakeFiles/image.dir/rule
+
+.PHONY : image
+
+# clean rule for target.
+libs/image/CMakeFiles/image.dir/clean:
+	$(MAKE) -f libs/image/CMakeFiles/image.dir/build.make libs/image/CMakeFiles/image.dir/clean
+.PHONY : libs/image/CMakeFiles/image.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

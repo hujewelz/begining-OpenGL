@@ -1,7 +1,7 @@
 [
 {
   "directory": "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build",
-  "command": "/usr/bin/clang++   -I\"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/libs/glapp/include\" -I/usr/local/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=gnu++11 -o CMakeFiles/hello-texture.dir/src/main.cpp.o -c \"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/src/main.cpp\"",
+  "command": "/usr/bin/clang++   -I\"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/libs/glapp/include\" -I/usr/local/include -I\"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/libs/image\"  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=gnu++11 -o CMakeFiles/hello-texture.dir/src/main.cpp.o -c \"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/src/main.cpp\"",
   "file": "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/src/main.cpp"
 },
 {
@@ -13,5 +13,10 @@
   "directory": "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/libs/glapp",
   "command": "/usr/bin/clang++   -I\"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/libs/glapp/include\" -I/usr/local/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=gnu++11 -o CMakeFiles/glapp.dir/src/shader.cpp.o -c \"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/libs/glapp/src/shader.cpp\"",
   "file": "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/libs/glapp/src/shader.cpp"
+},
+{
+  "directory": "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/libs/image",
+  "command": "/usr/bin/clang++   -I\"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/libs/image\"  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=gnu++11 -o CMakeFiles/image.dir/image.cpp.o -c \"/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/libs/image/image.cpp\"",
+  "file": "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/libs/image/image.cpp"
 }
 ]

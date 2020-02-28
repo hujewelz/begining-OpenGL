@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/CMakeFiles" "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/CMakeFiles/progress.marks"
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/CMakeFiles" "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/libs/image/CMakeFiles/progress.marks"
+	cd "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build" && $(MAKE) -f CMakeFiles/Makefile2 libs/image/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build" && $(MAKE) -f CMakeFiles/Makefile2 libs/image/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,84 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build" && $(MAKE) -f CMakeFiles/Makefile2 libs/image/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build" && $(MAKE) -f CMakeFiles/Makefile2 libs/image/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named hello-texture
+# Convenience name for target.
+libs/image/CMakeFiles/image.dir/rule:
+	cd "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build" && $(MAKE) -f CMakeFiles/Makefile2 libs/image/CMakeFiles/image.dir/rule
+.PHONY : libs/image/CMakeFiles/image.dir/rule
 
-# Build rule for target.
-hello-texture: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 hello-texture
-.PHONY : hello-texture
+# Convenience name for target.
+image: libs/image/CMakeFiles/image.dir/rule
 
-# fast build rule for target.
-hello-texture/fast:
-	$(MAKE) -f CMakeFiles/hello-texture.dir/build.make CMakeFiles/hello-texture.dir/build
-.PHONY : hello-texture/fast
-
-#=============================================================================
-# Target rules for targets named glapp
-
-# Build rule for target.
-glapp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glapp
-.PHONY : glapp
-
-# fast build rule for target.
-glapp/fast:
-	$(MAKE) -f libs/glapp/CMakeFiles/glapp.dir/build.make libs/glapp/CMakeFiles/glapp.dir/build
-.PHONY : glapp/fast
-
-#=============================================================================
-# Target rules for targets named image
-
-# Build rule for target.
-image: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 image
 .PHONY : image
 
 # fast build rule for target.
 image/fast:
-	$(MAKE) -f libs/image/CMakeFiles/image.dir/build.make libs/image/CMakeFiles/image.dir/build
+	cd "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build" && $(MAKE) -f libs/image/CMakeFiles/image.dir/build.make libs/image/CMakeFiles/image.dir/build
 .PHONY : image/fast
 
-src/main.o: src/main.cpp.o
+image.o: image.cpp.o
 
-.PHONY : src/main.o
+.PHONY : image.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/hello-texture.dir/build.make CMakeFiles/hello-texture.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+image.cpp.o:
+	cd "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build" && $(MAKE) -f libs/image/CMakeFiles/image.dir/build.make libs/image/CMakeFiles/image.dir/image.cpp.o
+.PHONY : image.cpp.o
 
-src/main.i: src/main.cpp.i
+image.i: image.cpp.i
 
-.PHONY : src/main.i
+.PHONY : image.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/hello-texture.dir/build.make CMakeFiles/hello-texture.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+image.cpp.i:
+	cd "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build" && $(MAKE) -f libs/image/CMakeFiles/image.dir/build.make libs/image/CMakeFiles/image.dir/image.cpp.i
+.PHONY : image.cpp.i
 
-src/main.s: src/main.cpp.s
+image.s: image.cpp.s
 
-.PHONY : src/main.s
+.PHONY : image.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/hello-texture.dir/build.make CMakeFiles/hello-texture.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+image.cpp.s:
+	cd "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build" && $(MAKE) -f libs/image/CMakeFiles/image.dir/build.make libs/image/CMakeFiles/image.dir/image.cpp.s
+.PHONY : image.cpp.s
 
 # Help Target
 help:
@@ -184,12 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... hello-texture"
-	@echo "... glapp"
 	@echo "... image"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... image.o"
+	@echo "... image.i"
+	@echo "... image.s"
 .PHONY : help
 
 
@@ -201,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/Users/luobobo/Developer/C:C++/Begining OpenGL/hello-texture/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
